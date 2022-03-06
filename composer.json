@@ -1,0 +1,17 @@
+{
+    "name": "simplon/nous-les-femmes",
+    "autoload": {
+        "psr-4": {
+            "Router\\": "./routes/",
+            "App\\": "app/",
+            "Database\\": "database/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Sonhibou",
+            "email": "sonhibou298@gmail.com"
+        }
+    ],
+    "require": {}
+}
