@@ -2,7 +2,7 @@
     "name": "simplon/nous-les-femmes",
     "autoload": {
         "psr-4": {
-            "Router\\": "./routes/",
+            "Router\\": "routes/",
             "App\\": "app/",
             "Database\\": "database/"
         }

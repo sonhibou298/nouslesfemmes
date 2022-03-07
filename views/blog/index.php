@@ -1,4 +1,3 @@
-
 <html>
 <head>
     <link href="./public/codejs.css" rel="stylesheet">
@@ -8,7 +7,7 @@
 <h2>Organisation Nous les femmes</h2>
 <div class="container" id="container">
     <div class="form-container sign-up-container">
-        <form action="/listAdmin">
+        <form action="/login" method="post">
             <h1>Administrateur</h1>
             <div class="social-container">
                 <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
@@ -22,7 +21,7 @@
         </form>
     </div>
     <div class="form-container sign-in-container">
-        <form action="?page=addAdmin" method="post">
+        <form action="#" method="post">
             <h1>Se Connecter</h1>
             <div class="social-container">
                 <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
