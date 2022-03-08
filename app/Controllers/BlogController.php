@@ -10,6 +10,11 @@ class BlogController extends Controller{
 
     }
 
+    public function createAdmin()
+    {
+        return $this->view('blog.add');
+    }
+
     public function show(int $idAdmin){
         $admin = new Admin($this->getDB());
         $admin = $admin->findById($idAdmin);

@@ -13,6 +13,8 @@ $router->get('/admin/:id', 'App\Controllers\BlogController@show');
 $router->get('/login', 'App\Controllers\BlogController@login');
 $router->post('/login', 'App\Controllers\BlogController@loginPost');
 $router->get('/logout', 'App\Controllers\BlogController@logout');
+$router->get('/addAdmin', 'App\Controllers\BlogController@createAdmin');
+
 
 $router->get('/listEmployer', 'App\Controllers\Employer\EmployerController@listEmployer');
 $router->get('/loginEm', 'App\Controllers\Employer\EmployerController@login');

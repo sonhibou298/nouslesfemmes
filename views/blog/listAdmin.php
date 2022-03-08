@@ -54,7 +54,7 @@ $root_path =  \Router\Router::$ROOT_PATH;
             <h2>Liste des Adminstrateurs</h2>
         </div>
         <div class="card-body">
-            <a href="http://localhost/PHP/NousLesFemmes/employer/create" class="btn btn-outline-secondary">Ajouter un administrateur</a><br><br>
+            <a href="addAdmin" class="btn btn-outline-secondary">Ajouter un administrateur</a><br><br>
             <table class="table table-bordered">
                 <tr>
                     <th>Id</th>
