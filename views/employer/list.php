@@ -4,10 +4,15 @@
 
     <title>Liste des Administrateurs</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<!--    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">-->
 </head>
 
 <body>
-<?php //include "views/navbar.php" ?>
+<!--NavBar-->
+<?php
+include dirname(__DIR__).'/../navbarEmployer.php';
+?>
+<!--EndNavBar-->
 <div class="container">
     <div class="card mt-5">
         <div class="card-header">
@@ -16,7 +21,7 @@
 <!--        <button type="button" class="btn btn-outline-secondary">Secondary</button>-->
         <div class="card-body">
             <a href="http://localhost/PHP/NousLesFemmes/employer/create" class="btn btn-outline-secondary">Ajouter un employer</a><br><br>
-            <table class="table table-bordered">
+            <table id="myTable" class="table table-bordered">
                 <tr>
                     <th>Id</th>
                     <th>Nom</th>
@@ -44,5 +49,7 @@
         </div>
     </div>
 </div>
+
 </body>
+
 </html>

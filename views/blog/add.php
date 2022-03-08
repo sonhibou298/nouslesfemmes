@@ -9,30 +9,27 @@
 <div class="container">
     <div class="card mt-5">
         <div class="card-header">
-            <h2>Ajouter un employer</h2>
+            <h2>Ajouter un administrateur</h2>
         </div>
         <div class="card-body">
-            <form method="POST" action="employer/create">
+            <form method="POST" action="./Controller/EmployerController.php">
                 <div class="form-group">
                     <label for="nom">Nom</label>
-                    <input type="text" name="nomEmployer" id="name" class="form-control">
+                    <input type="text" name="nomAdmin" id="name" class="form-control">
                 </div>
                 <div class="form-group">
                     <label for="prenom">Prenom</label>
-                    <input type="text" name="prenomEmployer" id="prenom" class="form-control">
+                    <input type="text" name="prenomAdmin" id="prenom" class="form-control">
                 </div>
                 <div class="form-group">
                     <label for="nom">email</label>
-                    <input type="email" name="email" id="email" class="form-control">
+                    <input type="email" name="emailAdmin" id="email" class="form-control">
                 </div>
                 <div class="form-group">
                     <label for="nom">Mot de passe</label>
-                    <input type="password" name="password" id="password" class="form-control">
+                    <input type="password" name="passwordAdmin" id="password" class="form-control">
                 </div>
-                <div class="form-group">
-                    <label for="nom">Administrateur</label>
-                    <input type="number" name="admin_id" id="password" class="form-control">
-                </div>
+
                 <div class="form-group"><br><br>
                     <button type="submit" class="btn btn-outline-success">Ajouter</button>
                 </div>

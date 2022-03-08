@@ -4,11 +4,11 @@ class Router{
 
     public $url;
     public $routes = [];
-
-    public function __construct($url)
+    public static $ROOT_PATH;
+    public function __construct($url, $root_path)
     {
         $this->url = trim($url, '/');
-
+        self::$ROOT_PATH = $root_path;
     }
 
     public function get(string $path, string $action){
