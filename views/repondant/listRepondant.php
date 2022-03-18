@@ -7,7 +7,7 @@
 <body>
 
 <?php
-include dirname(__DIR__).'/../navbar.php';
+include dirname(__DIR__).'/../navbarEmployer.php';
 ?>
 
 <div class="container">
@@ -39,8 +39,8 @@ include dirname(__DIR__).'/../navbar.php';
                         <td><?= $rep->employer_id?></td>
 
                         <td>
-                            <a href="edit.php?id=<?= $repondant->idRepondant?>" class="btn btn-outline-warning">Modifier</a>
-                            <a href="delete.php?id=<?= $repondant->idRepondant?>" class="btn btn-outline-danger">Supprimer</a>
+                            <a href="edit.php?id=<?= $rep->idRepondant?>" class="btn btn-outline-warning">Modifier</a>
+                            <a href="delete.php?id=<?= $rep->idRepondant?>" class="btn btn-outline-danger">Supprimer</a>
                         </td>
                     </tr>
                 <?php endforeach?>

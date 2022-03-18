@@ -1,4 +1,6 @@
-
+<?php
+include dirname(__DIR__).'/../navbar.php';
+?>
 <html>
 <head>
     <title>Ajouter un employer</title>
@@ -12,7 +14,7 @@
             <h2>Ajouter un administrateur</h2>
         </div>
         <div class="card-body">
-            <form method="POST" action="./Controller/EmployerController.php">
+            <form method="POST" action="addAdmin">
                 <div class="form-group">
                     <label for="nom">Nom</label>
                     <input type="text" name="nomAdmin" id="name" class="form-control">

@@ -13,20 +13,23 @@ $router->get('/admin/:id', 'App\Controllers\BlogController@show');
 $router->get('/login', 'App\Controllers\BlogController@login');
 $router->post('/login', 'App\Controllers\BlogController@loginPost');
 $router->get('/logout', 'App\Controllers\BlogController@logout');
+$router->post('/addAdmin', 'App\Controllers\BlogController@createAdmin');
 $router->get('/addAdmin', 'App\Controllers\BlogController@createAdmin');
+$router->get('/admin/delete/:idAdmin', 'App\Controllers\BlogController@delete');
 
 
 $router->get('/listEmployer', 'App\Controllers\Employer\EmployerController@listEmployer');
 $router->get('/loginEm', 'App\Controllers\Employer\EmployerController@login');
 $router->post('/loginEm', 'App\Controllers\Employer\EmployerController@loginPost');
-$router->get('/employer/create', 'App\Controllers\Employer\EmployerController@createPost');
+$router->post('/addEmployer', 'App\Controllers\Employer\EmployerController@createEmployer');
+$router->get('/addEmployer', 'App\Controllers\Employer\EmployerController@createEmployer');
 $router->get('/employer/edit/:id', 'App\Controllers\Employer\EmployerController@edit');
 $router->get('/employer/delete/:id', 'App\Controllers\Employer\EmployerController@delete');
 
 
 $router->get('/listRepondant', 'App\Controllers\Repondant\RepondantController@listRepondant');
 $router->get('/addRepondant', 'App\Controllers\Repondant\RepondantController@addRepondant');
-
+$router->post('/addRepondant', 'App\Controllers\Repondant\RepondantController@addRepondant');
 
 
 $router->get('/listEntreprise', 'App\Controllers\Entreprise\EntrepriseController@listEntreprise');

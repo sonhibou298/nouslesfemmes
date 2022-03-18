@@ -14,8 +14,8 @@ include dirname(__DIR__).'/../navbarEmployer.php';
             <h2>Ajouter un repondant</h2>
         </div>
         <div class="card-body">
-            <a href="addAdmin" class="btn btn-outline-secondary">Ajouter un repondant</a><br><br>
-            <form method="POST" action="employer/create">
+
+            <form method="POST" action="addRepondant">
                 <div class="form-group">
                     <label for="nom">Nom Repondant</label>
                     <input type="text" name="nomRepondant" id="name" class="form-control">
@@ -34,7 +34,7 @@ include dirname(__DIR__).'/../navbarEmployer.php';
                 </div>
                 <div class="form-group">
                     <label for="nom">Profession</label>
-                    <input type="email" name="email" id="password" class="form-control">
+                    <input type="text" name="profession" class="form-control">
                 </div>
                 <div class="form-group">
                     <label for="nom">Employer_id</label>

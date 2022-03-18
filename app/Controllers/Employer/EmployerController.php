@@ -16,9 +16,10 @@ class EmployerController extends Controller
     public function login(){
         return $this->view('blog.index');
     }
-    public function loginPost()
+    public function loginPost():Employer
     {
-        $employer = (new Employer($this->getDB()))->getByEmailEmployer($_POST['email']);
+            $employer = (new Employer($this->getDB()))->getByEmailEmployer($_POST['email']);
+
         if (password_verify($_POST['password'], $employer->password)) {
             return header('location: listRepondant');
         } else {
@@ -34,24 +35,19 @@ class EmployerController extends Controller
             return header('location: listEmployer');
         }
     }
-    public function createPost()
+    public function createEmployer()
     {
-        $nomEmployer = $_POST['nomEmployer'];
-        $prenomEmployer = $_POST['prenomEmployer'];
-        $email = $_POST['email'];
-        $password = $_POST['password'];
-        $admin_id = $_POST['admin_id'];
-        $employer = (new Employer($this->getDB()))->create($nomEmployer, $prenomEmployer, $email, $password, $admin_id);
-        var_dump($employer);
-//        $nomEmployer = $_POST['nomEmployer'];
-//        $prenomEmployer = $_POST['prenomEmployer'];
-//        $email = $_POST['email'];
-//        $password = $_POST['password'];
-//        $admin_id = $_POST['admin_id'];
-//        $employer = new Employer($this->getDB());
-//        $result = $employer->create($nomEmployer, $prenomEmployer, $email, $password, $admin_id);
-
-        return header('Location: listEmployer');
+        if( !empty($_POST)){
+            $em = new Employer($this->getDB());
+            $nomEm = $_POST['nomEmployer'];
+            $prenomEm = $_POST['prenomEmployer'];
+            $emailEm = $_POST['email'];
+            $pwd = password_hash($_POST['password'], PASSWORD_DEFAULT);
+            $admin = $_POST['admin_id'];
+            $result = $em->addEmployer($nomEm, $prenomEm, $emailEm, $pwd, $admin);
+            return header('location : listEmployer');
+        }
+        return $this->view('employer.add');
     }
 
 }

@@ -10,7 +10,7 @@
 <body>
 <!--NavBar-->
 <?php
-include dirname(__DIR__).'/../navbarEmployer.php';
+include dirname(__DIR__).'/../navbar.php';
 ?>
 <!--EndNavBar-->
 <div class="container">
@@ -20,7 +20,7 @@ include dirname(__DIR__).'/../navbarEmployer.php';
         </div>
 <!--        <button type="button" class="btn btn-outline-secondary">Secondary</button>-->
         <div class="card-body">
-            <a href="employer/create" class="btn btn-outline-secondary">Ajouter un employer</a><br><br>
+            <a href="addEmployer" class="btn btn-outline-secondary">Ajouter un employer</a><br><br>
             <table id="myTable" class="table table-bordered">
                 <tr>
                     <th>Id</th>
